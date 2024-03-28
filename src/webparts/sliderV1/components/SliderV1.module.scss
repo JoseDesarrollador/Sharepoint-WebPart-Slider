@@ -1,0 +1,256 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.sliderV1 {
+
+  
+  
+  
+  margin: auto;  
+
+  
+
+}
+
+
+:global{
+  
+  
+  @keyframes :global(circle-out-center) {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+
+  [transition-style="out:circle:center"] {
+    animation: 3s cubic-bezier(0.25, 1, 0.3, 1) circle-out-center both;
+  }
+  
+  .circle{
+    animation: 3s cubic-bezier(0.25, 1, 0.3, 1) circle-out-center both;
+  }
+
+  @keyframes :global(wipe-in-bottom-right) {
+    from {
+      clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+    }
+    to {
+      clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+    }
+  }
+
+
+  [transition-style="in:wipe:bottom-right"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-bottom-right both;
+  }
+
+  .animacion1 {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-bottom-right both;
+  }
+
+  @keyframes :global(circle-in-hesitate) {
+    0% {
+      clip-path: circle(0%);
+    }
+    40% {
+      clip-path: circle(40%);
+    }
+    100% {
+      clip-path: circle(125%);
+    }
+  }
+
+  [transition-style="in:circle:hesitate"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+  }
+
+  @keyframes :global(square-in-bottom-right) {
+    from {
+      clip-path: inset(0 100% 100% 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  [transition-style="in:square:bottom-right"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) square-in-bottom-right
+      both;
+  }
+  @keyframes :global(wipe-in-left) {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  [transition-style="in:wipe:left"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+  }
+  @keyframes :global(wipe-in-up) {
+    from {
+      clip-path: inset(100% 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  [transition-style="in:wipe:up"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-up both;
+  }
+  @keyframes :global(wipe-in-top-left) {
+    from {
+      clip-path: polygon(150% 50%, 150% 50%, 50% 150%, 50% 150%);
+    }
+    to {
+      clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+    }
+  }
+
+  [transition-style="in:wipe:top-left"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-top-left both;
+  }
+  @keyframes :global(wipe-in-top-right) {
+    from {
+      clip-path: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
+    }
+    to {
+      clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+    }
+  }
+
+  [transition-style="in:wipe:top-right"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-top-right both;
+  }
+  @keyframes :global(wipe-cinematic-in) {
+    0% {
+      clip-path: inset(100% 0 100% 0);
+    }
+    30%,
+    70% {
+      clip-path: inset(10% 0 10% 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  [transition-style="in:wipe:cinematic"] {
+    animation-name: wipe-cinematic-in;
+  }
+  @keyframes :global(diamond-in-hesitate) {
+    0% {
+      clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    }
+    50% {
+      clip-path: polygon(45% 50%, 50% 25%, 55% 50%, 50% 75%);
+    }
+    100% {
+      clip-path: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
+    }
+  }
+
+  [transition-style="in:diamond:hesitate"] {
+    animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) diamond-in-hesitate both;
+  }
+  @keyframes :global(polygon-in-opposing-corners) {
+    from {
+      clip-path: polygon(0 0, 50% 50%, 100% 100%, 50% 50%);
+    }
+    to {
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    }
+  }
+
+  [transition-style="in:polygon:opposing-corners"] {
+    animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1)
+      polygon-in-opposing-corners both;
+  }
+
+  @keyframes :global(in-circle-swoop) {
+    from {
+      clip-path: var(--circle-top-right-out);
+    }
+    to {
+      clip-path: var(--circle-bottom-right-in);
+    }
+  }
+
+  [transition-style="in:custom:circle-swoop"] {
+    transition-duration: 5s;
+    animation-name: in-circle-swoop;
+  }
+
+  .diapositiva {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+  }
+  .contenedor {
+    position: relative;
+    height: 400px;
+  }
+
+  .contenedor > div.diapositiva {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .slider_img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .descriptionItem {
+   
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    right: 0%;
+    width: 30%;
+    max-width: 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .contenido {
+    color: white;
+    margin: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btnCirculares {
+    display: inline;
+    position: relative;
+    z-index: 9999;
+    top: 90%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .btnCirculares span {
+    margin: 5px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: large;
+    color: white;
+    transition: 0.3s ease-in-out all;
+  }
+  .btnCirculares span:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+    color: beige;
+    scale: 1.3;
+  }
+}
